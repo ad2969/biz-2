@@ -1,13 +1,15 @@
 import React from 'react'
 
+import { Button } from 'antd'
+
 import { withFirebase } from 'Authentication'
 
 import t from 'assets/languages'
 
 const SignOutButton = ({ firebase }) => (
-  <button type="button" onClick={firebase.doSignOut} className="t--capitalize">
+  <Button onClick={firebase.doSignOut} className="t--capitalize">
     {t('sign out')}
-  </button>
+  </Button>
 )
 
 export default withFirebase(SignOutButton)

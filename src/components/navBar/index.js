@@ -1,40 +1,49 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import SignOutButton from 'components/buttons/signOutButton'
 import * as ROUTES from 'constants/routes'
+import { Icon } from 'antd'
 
-import { AuthUserContext } from 'Session'
+import Logo from 'assets/logo/bestbuy--white.png'
 
-import t from 'assets/languages'
+class NavBar extends React.Component {
+  constructor (props) {
+    super(props)
+    this.search = this.search.bind(this)
+  }
 
-const NavBar = () => (
-  <div>
-    <AuthUserContext.Consumer>
-      {authUser =>
-        authUser ? <NavigationAuth /> : <NavigationNonAuth />
-      }
-    </AuthUserContext.Consumer>
-  </div>
-)
+  search () {
+    this.props.history.push(ROUTES.HOME)
+  }
 
-const NavigationAuth = () => (
-  <ul>
-    <li>
-      <Link to={ROUTES.LANDING} className="t--capitalize">{t('sign in')}</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.HOME} className="t--capitalize">{t('home page')}</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ACCOUNT} className="t--capitalize">{t('account')}</Link>
-    </li>
-    <li>
-      <SignOutButton />
-    </li>
-  </ul>
-)
+  render () {
+    return (
+      <div className="Header">
+        <div className="Header__toptop">
+          <span>Top</span>
+          <span>Top</span>
+        </div>
+        <div className="Header__top">
+          <div className="Header__top__logo">
+            <Link to={ROUTES.LANDING}><img src={Logo} alt="logo"/></Link>
+          </div>
+          <div><h1>Welcome, Gurus!</h1></div>
+          <div className="Header__top__buttons">
+            <SignOutButton />
+          </div>
+        </div>
+        <div className="Header__bottom">
+          <span className="first">Shop <Icon type="down" /></span>
+          <span>Brands <Icon type="down" /></span>
+          <span>Deals <Icon type="down" /></span>
+          <span>Service <Icon type="down" /></span>
+        </div>
 
-const NavigationNonAuth = () => (<div></div>)
+      </div>
+    )
+  }
+}
 
-export default NavBar
+export default withRouter(NavBar)
+

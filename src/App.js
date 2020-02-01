@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { setLanguage, getLanguage } from 'assets/languages'
+import { Layout } from 'antd'
 
 import NavBar from 'components/navBar'
 import SignUpPage from 'views/SignUp'
 import SignInPage from 'views/SignIn'
 import PasswordForgetPage from 'views/SignIn/passwordForget'
 import HomePage from 'views/Home'
-import AccountPage from 'views/Account'
 
 import * as ROUTES from 'constants/routes'
 import * as LANGUAGES from 'constants/languages'
@@ -26,15 +26,19 @@ const App = () => {
 
   return (
     <Router>
-      <NavBar />
-
-      <hr />
-
-      <Route exact path={ROUTES.LANDING} component={SignInPage} />
-      <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-      <Route exact path={ROUTES.HOME} component={HomePage} />
-      <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
+          <Route exact path={ROUTES.LANDING} render={() => (<SignInPage/>)} />
+          <Route exact path={ROUTES.SIGN_UP} render={() => (<SignUpPage/>)} />
+          <Route exact path={ROUTES.PASSWORD_FORGET} render={() => (<PasswordForgetPage/>)} />
+          <Route exact path={ROUTES.HOME} render={() => (
+          <Layout>
+            <Layout.Header>
+              <NavBar />
+            </Layout.Header>
+            <Layout.Content>
+              <HomePage/>
+            </Layout.Content>
+          </Layout>
+          )} />
     </Router>
   )
 }
