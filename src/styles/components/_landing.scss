@@ -62,6 +62,9 @@
             word-wrap: none;
             h1 {
                 color: white;
+                @include for-phone {
+                    display: none;
+                }
             }
         }
         .Header__top__buttons {

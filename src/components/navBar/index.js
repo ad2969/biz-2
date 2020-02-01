@@ -21,8 +21,8 @@ class NavBar extends React.Component {
     return (
       <div className="Header">
         <div className="Header__toptop">
-          <span>Top</span>
-          <span>Top</span>
+          <span>Account</span>
+          <span>Help</span>
         </div>
         <div className="Header__top">
           <div className="Header__top__logo">
@@ -35,9 +35,9 @@ class NavBar extends React.Component {
         </div>
         <div className="Header__bottom">
           <span className="first">Shop <Icon type="down" /></span>
-          <span>Brands <Icon type="down" /></span>
-          <span>Deals <Icon type="down" /></span>
-          <span>Service <Icon type="down" /></span>
+          <span>Users <Icon type="down" /></span>
+          <span>History <Icon type="down" /></span>
+          <span>Support <Icon type="down" /></span>
         </div>
 
       </div>

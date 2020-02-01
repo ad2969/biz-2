@@ -1,0 +1,30 @@
+.Home {
+    padding: 0 50px;
+    .container {
+        padding: 3rem 3rem;
+        @include for-phone {
+            padding: 3rem 0;
+        }
+    }
+
+    .main-text {
+        font-size: 2.5rem;
+        @include for-phone {
+            font-size: 2rem;
+        }
+    }
+    .title {
+        padding-top: 3rem;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .ant-card-meta-title {
+        text-overflow: unset;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+    .ant-card-meta-description {
+        font-size: 1rem;
+    }
+}
