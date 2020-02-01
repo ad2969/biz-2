@@ -28,7 +28,7 @@ class NavBar extends React.Component {
           <div className="Header__top__logo">
             <Link to={ROUTES.LANDING}><img src={Logo} alt="logo"/></Link>
           </div>
-          <div><h1>Welcome, Gurus!</h1></div>
+          <div><h1>Welcome, Guru!</h1></div>
           <div className="Header__top__buttons">
             <SignOutButton />
           </div>

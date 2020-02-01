@@ -28,4 +28,26 @@
     .ant-card-meta-description {
         font-size: 1rem;
     }
+
+    .row.box {
+        border: 2px solid $darkblue;
+        margin: 2rem;
+        padding: 1rem;
+
+        .recomm-text {
+            text-align: center;
+            font-size: 2.5rem;
+            @include for-phone {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .flagg {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        right: -50%;
+        transform: scale(0.4) rotate(30deg);
+    }
 }
