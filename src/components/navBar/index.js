@@ -21,7 +21,7 @@ const NavBar = () => (
 const NavigationAuth = () => (
   <ul>
     <li>
-      <Link to={ROUTES.LANDING} className="t--capitalize">{t('landing')}</Link>
+      <Link to={ROUTES.LANDING} className="t--capitalize">{t('sign in')}</Link>
     </li>
     <li>
       <Link to={ROUTES.HOME} className="t--capitalize">{t('home page')}</Link>
@@ -35,15 +35,6 @@ const NavigationAuth = () => (
   </ul>
 )
 
-const NavigationNonAuth = () => (
-  <ul>
-    <li>
-      <Link to={ROUTES.LANDING} className="t--capitalize">{t('landing')}</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.SIGN_IN} className="t--capitalize">{t('sign in')}</Link>
-    </li>
-  </ul>
-)
+const NavigationNonAuth = () => (<div></div>)
 
 export default NavBar

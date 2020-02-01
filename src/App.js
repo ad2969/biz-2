@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { setLanguage, getLanguage } from 'assets/languages'
 
 import NavBar from 'components/navBar'
-import LandingPage from 'views/Landing'
 import SignUpPage from 'views/SignUp'
 import SignInPage from 'views/SignIn'
 import PasswordForgetPage from 'views/SignIn/passwordForget'
@@ -31,9 +30,8 @@ const App = () => {
 
       <hr />
 
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route exact path={ROUTES.LANDING} component={SignInPage} />
       <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route exact path={ROUTES.HOME} component={HomePage} />
       <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
