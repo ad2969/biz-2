@@ -1,0 +1,27 @@
+{
+  "template": "template",
+  "welcome": "welcome",
+  "home page": "home page",
+  "page": "page",
+  "landing": "landing",
+
+  "sign in": "sign in",
+  "sign up": "sign up",
+  "email address": "email address",
+  "full name": "full name",
+  "confirm": "confirm",
+  "new password": "new",
+  "password": "password",
+  "reset password": "reset password",
+  "forget": "forget",
+  "forgot password": "forgot password",
+  "account": "account",
+  "dont have an account": "don't have an account",
+
+  "brother": "brother",
+  "brother_plural": "brothers",
+  "sister": "sister",
+  "sister_plural": "sisters",
+
+  "home page accessibility": "The Home Page is accessible by every signed in user"
+}
