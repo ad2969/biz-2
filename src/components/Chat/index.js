@@ -96,7 +96,7 @@ export default class Chat extends React.Component {
       return (
         <div className={this.props.active ? 'Chat chat--active' : 'Chat chat--inactive'}>
           <div className="Chat__header">
-            <h3>Chat with an expert!</h3>
+            <h3>Chat with a user!</h3>
             <Icon type="phone" theme="filled" className="icon" style={{ color: 'white' }}/>
             <span className="close" onClick={this.handleClose}>x</span></div>
           <ul className="Messages-list" id="chatbox">
