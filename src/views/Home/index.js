@@ -24,6 +24,10 @@ import Good from 'assets/media/good.png'
 import Best from 'assets/media/best.png'
 import Great from 'assets/media/great.png'
 
+import Chat from 'components/Chat'
+
+import bb from 'assets/media/bestbuy-bs--small.png'
+
 const images = [
   Laptop1Img,
   Laptop2Img,
@@ -192,6 +196,8 @@ const HomePage = () => {
   }
 
   const [time, setTime] = useState(100)
+  const [ chatStatus, setChatStatus ] = useState(false)
+
 
   useEffect(() => {
     const addTime = () => {
@@ -235,7 +241,7 @@ const HomePage = () => {
             </div>
           <div className="column-6">
             <div className="row box">
-              <div className="recomm-text">TOP RESULTS</div>
+              <div className="recomm-text">TOP RECOMMENDATIONS</div>
               <div className="column">
                 {recommendations1}
               </div>
@@ -246,6 +252,10 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <div style={{ display: chatStatus && 'none' }} className="chatbutton">
+        <img src={bb} onClick={() => {setChatStatus(true)}} alt="pullup"/>
+      </div>
+      <Chat active={chatStatus} chatFunction={setChatStatus} />
     </div>
   )
 }
