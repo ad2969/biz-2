@@ -1,0 +1,27 @@
+{
+  "template": "modèle",
+  "welcome": "bienvenue",
+  "home page": "page d'accueil",
+  "page": "page",
+  "landing": "atterrissage",
+  
+  "sign in": "se connecter",
+  "sign up": "se inscrire",
+  "email address": "adresse électronique",
+  "full name": "nom complet",
+  "confirm": "confirmer",
+  "new": "nouveau",
+  "password": "mot de passe",
+  "reset password": "réinitialiser le mot de passe",
+  "forget": "oublier",
+  "forgot password": "mot de passe oublié",
+  "account": "compte",
+  "dont have an account": "je n'ai pas de compte",
+
+  "brother": "mon frere",
+  "brother_plural": "frères",
+  "sister": "sœur",
+  "sister_plural": "sœurs",
+  
+  "home page accessibility": "La page d'accueil est accessible à chaque utilisateur connecté"
+}

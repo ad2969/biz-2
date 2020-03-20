@@ -1,0 +1,28 @@
+
+{
+  "template": "模板",
+  "welcome": "欢迎",
+  "home page": "主页",
+  "page": "页",
+  "landing": "登陆页面",
+  
+  "sign in": "登入",
+  "sign up": "注册",
+  "email address": "电子邮件地址",
+  "full name": "全名",
+  "confirm": "确认",
+  "new": "新",
+  "password": "密码",
+  "reset password": "重设密码",
+  "forget": "忘记",
+  "forgot password": "忘记密码",
+  "account": "帐号",
+  "dont have an account": "没有帐号",
+
+  "brother": "哥哥",
+  "brother_plural": "兄弟",
+  "sister": "姐姐",
+  "sister_plural": "姐妹们",
+  
+  "home page accessibility": "每个登录用户均可访问主页"
+}

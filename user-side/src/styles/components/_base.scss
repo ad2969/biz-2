@@ -1,0 +1,66 @@
+.rate {
+    font-size: 1rem;
+    i {
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+    }
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 50%;
+    @include for-phone {
+        width: 100%;
+    }
+}
+.column-4 {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.guru--wrapper {
+    position: relative;
+    .guru--button {
+        img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 50%;
+            transition: all 0.2s;
+            cursor: pointer;
+            transform: scale(1);
+            border: 2px solid $yellow;
+            animation: shake 4s cubic-bezier(.36,.07,.19,.97) both infinite;
+        }
+        img:hover {
+            transform: scale(1.1);
+            transition: all 0.2s;
+            animation-play-state: paused;
+        }
+    }
+}
+
+@keyframes shake {
+    1%, 11% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      2%, 10% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      3%, 6%, 8% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      5%, 7% {
+        transform: translate3d(4px, 0, 0);
+      }
+}

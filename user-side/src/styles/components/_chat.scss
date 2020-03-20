@@ -1,0 +1,205 @@
+.Chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+    max-width: 350px;
+    min-height: 500px;
+    width: 30vw;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    background: #F8F8F8;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2%;
+    overflow: hidden;
+    box-shadow: 0px -10px 50px -10px rgba(0,0,0,0.75);
+    z-index: 100;
+    @include for-phone {
+      max-width: unset;
+      width: 80vw;
+      right: 10vw;
+      height: 80vh;
+      bottom: 10vh;
+    }
+  
+  .Chat__header {
+    background-color: $darkblue;
+    overflow: visible;
+    width: 100%;
+    min-height: 50px;
+    text-align: center;
+    display: flex;
+    h3 {
+        padding-top: 0.5rem;
+        color: white;
+        flex: 1;
+    }
+    .icon {
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 3rem;
+      cursor: pointer;
+    }
+    .close {
+      color: white;
+      padding-right: 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      user-select: none;
+      line-height: 2.5rem;
+      cursor: pointer;
+    }
+  }
+  
+  .Messages-list {
+    padding: 20px 0;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+    overflow: auto;
+  }
+  
+  .Messages-message {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .Messages-message.currentMember {
+    /*justify-content: flex-end;*/
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  
+  .Message-content {
+    display: inline-block;
+  }
+  
+  .currentMember > .Message-content {
+    align-items: flex-end;
+  }
+  
+  .Messages-message > .avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px -10px;
+  }
+  
+  .Message-content > .username {
+    display: block;
+    color: gray;
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+  
+  .Message-content > .text {
+    padding: 10px;
+    max-width: 400px;
+    margin: 0;
+    border-radius: 12px;
+    background-color: lightgrey;
+    color: black;
+    display: inline-block;
+  }
+  
+  .currentMember > .Message-content .text {
+    background-color: $blue;
+    color: white;
+  }
+  
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  i {
+    font-size: 24px;
+    line-height: 4rem;
+    padding-right: 5%;
+  }
+  
+  input {
+    padding: 0 10%;
+    font-size: 16px;
+    flex-grow: 1;
+    border: none;
+    line-height: 4rem;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+.Chat.chat--active {
+  transition: all 0.3s;
+  transform: translateY(0)
+}
+.Chat.chat--inactive {
+  transition: all 0.3s;
+  transform: translateY(150%)
+}
+
+.Chat-Feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20vh;
+  max-width: 350px;
+  max-height: 14rem;
+  width: 30vw;
+  position: fixed;
+  right: 1%;
+  bottom: 2%;
+  background: #F8F8F8;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2%;
+  overflow: hidden;
+  box-shadow: 0px -10px 50px -10px rgba(0,0,0,0.75);
+  text-align: center;
+  @include for-phone {
+    width: 80vw;
+    right: 10%;
+    bottom: 4%;
+    box-shadow: 0px -5px 10px -5px rgba(0,0,0,0.75);
+
+  }
+  .close {
+    text-align: right;
+    line-height: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+  }
+  .rate {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  i {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  h1 {
+    max-width: 80%;
+    word-wrap: break-word;
+    margin: 0 auto;
+    user-select: none;
+  }
+}
+.Chat-Feedback.chat--active {
+  opacity: 1;
+  transition: 0.5s all;
+}
+
+.Chat-Feedback.chat--inactive {
+  opacity: 0;
+  transition: 0.5s all;
+}
